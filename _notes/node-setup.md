@@ -12,7 +12,7 @@
     
 # Dev-Dependencies
     $ npm i -D
-        nodemon                         # auto restart server after changing code
+        nodemon                        # auto restart server after changing code
 
 # Create project 
     $ npm install express-generator -g
