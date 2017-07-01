@@ -18,3 +18,10 @@ imports: [BrowserModule, FormsModule],
     (event) = "expression"
     Dom events, Directive event or component event
     <my-component (eventName) = "expression">
+
+    in parent component
+    <app-message [message]='message' (editClicked)="message.content=$event"></app-message>
+
+    in child component
+    @Input() message: Message;  
+    @Output() editClicked = new EventEmitter<string>();

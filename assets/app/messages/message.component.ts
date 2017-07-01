@@ -10,8 +10,8 @@ export class MessageComponent {
     @Input() message: Message;   // value can be passed from parent component
     @Output() editClicked = new EventEmitter<string>();
 
+    color = "red";
     onEdit() {
-        console.log('clicked');
         this.editClicked.emit('A new value');   // refer as $event
     }
 

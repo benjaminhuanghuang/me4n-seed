@@ -4,8 +4,11 @@ import { Message } from "./messages/message.model";
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
-    styles:[]
+    styles: []
 })
 export class AppComponent {
-    message : Message = new Message('Some message', 'Maxz');
+    messages: Message[] = [
+        new Message('Some message', 'Maxz'),
+        new Message('Other message', 'Tom')
+    ];
 }  
