@@ -6,6 +6,11 @@ import { AppComponent } from "./app.component";
 import { MessageListComponent } from "./messages/message-list.component";
 import { MessageInputComponent } from "./messages/message-input.component";
 import { MessageComponent } from "./messages/message.component";
+import { MessagesComponent } from "./messages/messages.component";
+import { AuthenticationComponent } from "./auth/authentication.component";
+import { HeaderComponent } from "./header.component";
+
+import { routing } from "./app.routing";
 
 @NgModule({
     declarations: [
@@ -13,8 +18,11 @@ import { MessageComponent } from "./messages/message.component";
         MessageComponent,
         MessageListComponent,
         MessageInputComponent,
+        MessagesComponent,
+        AuthenticationComponent,
+        HeaderComponent
     ],
-    imports: [BrowserModule, FormsModule],
+    imports: [BrowserModule, FormsModule, routing],
     bootstrap: [AppComponent]
 })
 export class AppModule {
