@@ -12,6 +12,8 @@ import { HeaderComponent } from "./header.component";
 
 import { routing } from "./app.routing";
 
+import { LogoutComponent } from "./auth/logout.component";
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -20,7 +22,8 @@ import { routing } from "./app.routing";
         MessageInputComponent,
         MessagesComponent,
         AuthenticationComponent,
-        HeaderComponent
+        HeaderComponent,
+        LogoutComponent
     ],
     imports: [BrowserModule, FormsModule, routing],
     bootstrap: [AppComponent]

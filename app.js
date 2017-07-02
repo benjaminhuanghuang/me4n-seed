@@ -33,6 +33,7 @@ app.use(function (req, res, next) {
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
+// Avoid angular Url cause 404
 app.use(function (req, res, next) {
     return res.render('index');
 });
