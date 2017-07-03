@@ -10,6 +10,9 @@ import { Component } from "@angular/core";
                 </ul>
             </nav>
         </header>
+        <div class="row spacing">
+            <router-outlet></router-outlet>
+        </div>
     `
 })
 export class HeaderComponent {
