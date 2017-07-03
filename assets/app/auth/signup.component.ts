@@ -10,7 +10,8 @@ export class SignupComponent{
     myForm: FormGroup;
 
     onSubmit() {
-
+        console.log(this.myForm);
+        this.myForm.reset();
     }
     constructor() {
         this.myForm = new FormGroup({
