@@ -31,7 +31,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/messsage',messageRoutes);    // Should before appRoute
+app.use('/message',messageRoutes);    // Should before appRoute
 app.use('/', appRoutes);
 
 // catch 404 and forward to error handler
