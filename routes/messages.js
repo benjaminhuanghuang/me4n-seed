@@ -39,6 +39,7 @@ router.post('/', function (req, res, next) {
     });
 });
 
+// Update
 router.patch('/:id', function (req, res, next) {
     Message.findById(req.params.id, function (err, message) {
         if (err) {
