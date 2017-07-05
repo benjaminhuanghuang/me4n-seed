@@ -13,7 +13,6 @@ export class MessageService {
     messages: Message[] = [];
     messageIsEdit = new EventEmitter<Message>();
 
-
     constructor(private http: Http) {
 
     }

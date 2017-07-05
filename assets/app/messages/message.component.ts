@@ -1,27 +1,39 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 import { Message } from "./message.model";
 import { MessageService } from "./message.service";
 
 @Component({
     selector: 'app-message',
-    templateUrl: './message.component.html'
+    templateUrl: './message.component.html',
+    styles: [`
+        .author {
+            display: inline-block;
+            font-style: italic;
+            font-size: 12px;
+            width: 80%;
+        }
+        .config {
+            display: inline-block;
+            text-align: right;
+            font-size: 12px;
+            width: 19%;
+        }
+    `]
 })
 export class MessageComponent {
-    @Input() message: Message;   // value can be passed from parent component
-    @Output() editClicked = new EventEmitter<string>();
+    @Input() message: Message;
 
-    // inject same instance with message-input component
-    constructor(private messageService: MessageService) {
+    constructor(private messageService: MessageService) {}
 
-    }
-
-    color = "red";
     onEdit() {
-        this.editClicked.emit('A new value');   // refer as $event
+        this.messageService.editMessage(this.message);
     }
 
     onDelete() {
-        this.messageService.deleteMessage(this.message);
+        this.messageService.deleteMessage(this.message)
+            .subscribe(
+                result => console.log(result)
+            );
     }
 }
